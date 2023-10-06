@@ -4,6 +4,7 @@ ____
 ![JINSU-s-Site-Title](https://github.com/Jinsu404/ecole2023/assets/137613256/f578172e-72a2-4376-94cc-2f5e72e2614c)
 
 ### 파트별 수정 한 부분
+___
 1. 메인 HERO 화면
    - 아직 어떻게 해야할지 고민중... 좋은 배경사진과 내용을 찾을 때 까지 로딩인척 할 예정<br>
 2. ABOUT 화면 <br>
