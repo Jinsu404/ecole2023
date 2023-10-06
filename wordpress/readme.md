@@ -1,4 +1,4 @@
-### wordpres로 포트폴리오 사이트 디자인하기
+### wordpress로 포트폴리오 사이트 디자인하기
 ___
 <https://2019575042.ksecole.kr/><br><br>
 desktop ver <br>
