@@ -19,3 +19,13 @@ ___
    - 아직 스킬은 생각 안함 <br>
 6. STUDYING <br>
    - 진행도를 넣어서 어느정도 공부했는지 나타냄 <br>
+7. FOOTER <br>
+   - 쓸데없는 내용들을 다 지움 
+
+### mobile Ver <br>
+
+![mobileMenu](https://github.com/Jinsu404/ecole2023/assets/137613256/1de0bed2-5443-4e01-8543-3a71b3426a2d)
+### 모바일 버전 수정 한 부분 <br>
+메뉴 버튼을 눌렀을 때 나오는 내용을 수정함 <br>
+
+
