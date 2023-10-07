@@ -1,7 +1,8 @@
 ### Wordpress로 포트폴리오 사이트 디자인하기 #2
 ____
 
-![JINSU-s-Site-Title](https://github.com/Jinsu404/ecole2023/assets/137613256/f578172e-72a2-4376-94cc-2f5e72e2614c)
+![web](https://github.com/Jinsu404/ecole2023/assets/137613256/1ec1ca43-19b6-4213-9b38-e0aff7083e06)
+
 
 ### 파트별 수정 한 부분
 ___
