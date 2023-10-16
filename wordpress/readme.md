@@ -2,7 +2,7 @@
 ___
 <https://2019575042.ksecole.kr/><br><br>
 desktop ver <br>
-![desktop-wp](https://github.com/Jinsu404/ecole2023/assets/137613256/1e4777c4-d61e-4ac3-9f6b-87de707b7496)
+
 <br>
 ### 요소별 설명과 개선할점
 ___
@@ -18,7 +18,7 @@ ___
      공부의 진행도나 어떤 책,강의로 공부하는지 적으면 좋을것 같다<br>
 
 mobile ver<br>
-![mobile-wp](https://github.com/Jinsu404/ecole2023/assets/137613256/f66d2014-6a42-4c84-bbae-b94f2bc1ef6f)<br>
+
 ### 느낀점
 ___
 프로젝트때 반응형 하는게 어려워서 포기했었는데 워드프레스는 모바일 반응형 웹도 쉽게 수정할 수 있어서 좋은것 같다
