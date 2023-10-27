@@ -38,4 +38,9 @@ ___
 
 4. 마지막으로 로컬에서 작업한 내용을 서버에 옮겨야하는데 서버에 깔았던 리액트를 지우고 다시 nextjs를 설치해서 옮기려 했음<br>
    근데 next를 설치한뒤 빌드가 되지 않아서 실패했음
+<br>
+<br>
+____
+5. 서버에서 빌드 성공 !!
+<img width="1281" alt="image" src="https://github.com/Jinsu404/ecole2023/assets/137613256/9dbae5ec-e05a-4cdb-bcbc-d040a79a30e3">
 
