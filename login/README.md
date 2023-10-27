@@ -22,8 +22,10 @@ ____
 <img width="635" alt="image" src="https://github.com/Jinsu404/ecole2023/assets/137613256/a2f26b65-fef5-4e05-a832-4d6e77bd3f10">
 ____
 
-<img width="1100" alt="image" src="https://github.com/Jinsu404/ecole2023/assets/137613256/e10f38a5-7f28-4387-9092-96239f148687">
+<img width="1100" alt="image" src="https://github.com/Jinsu404/ecole2023/assets/137613256/e10f38a5-7f28-4387-9092-96239f148687"><br>
 ____
 
 <img width="1189" alt="image" src="https://github.com/Jinsu404/ecole2023/assets/137613256/4146f22c-1979-4c3f-b33d-6844c544f59e">
+<img width="637" alt="image" src="https://github.com/Jinsu404/ecole2023/assets/137613256/6ac97045-59f8-4cad-b674-ee4e4eabcb2b">
+
 ____
