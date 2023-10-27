@@ -5,7 +5,8 @@ ___
 1. Main 로그인 화면<br>
 <img width="1468" alt="image" src="https://github.com/Jinsu404/ecole2023/assets/137613256/01582529-5d33-4229-9a6f-468df7782a7e"><br>
 제일 처음 접속했을 떄 보이는 화면<br>
-포트폴리오 사이트의 배경색과 로그인 박스의 색을 통일함
+먼저 레이아웃은 제일 상위 div에 높이를 100vh로 주고 flex를 준 뒤 align-items: center, justify-content: center를 해서 가운데 정렬했음<br>
+배경을 하얀색으로 두면 너무 심심하고, 회색으로 채우면 너무 칙칙해서 background: linear-gradient를 이용해서 그라데이션으로 색을 넣엇음<br>
 <br><br>
 ___
 2. 회원가입 화면<br>
