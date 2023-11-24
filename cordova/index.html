@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산 관광지 소개</title>
+
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="./js/tapbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+</head>
+
+<body>
+    <div data-role="page" id="home">
+        <div id="viewSlide" class="w-96 h-96">
+            <div class="slider">
+                <img class="active" src="./image/slide1.png" />
+                <img src="./image/slide2.png" />
+                <img src="./image/slide3.png" />
+                <img src="./image/slide4.jpeg" />
+            </div>
+
+            <script src="./js/slide.js"></script>
+        </div>
+
+        <div class="mainText">
+            <p style="margin-left: 12px;">인공지능을 사용한 위험요소 탐지 서비스</p>
+        </div>
+
+        <div id="test" onclick="$.mobile.changePage('#아이디어배경소개', {
+            transition: 'flip',
+            changeHash: false
+        })">
+            <div id="testbar">
+                <p class="pageName" style="margin-left: 10px">아이디어 배경</p>
+            </div>
+        </div>
+
+        <div id="동백섬" onclick="$.mobile.changePage('#Azure소개', {
+            transition: 'flip',
+            changeHash: false
+        })">
+            <div id="동백섬bar">
+                <p style="margin-left: 10px; ">Azure</p>
+            </div>
+        </div>
+
+        <div id="청사포" onclick="$.mobile.changePage('#차별점소개', {
+            transition: 'flip',
+            changeHash: false
+        })">
+            <div id="청사포bar">
+                <p style="margin-left: 10px">차별점</p>
+            </div>
+        </div>
+
+        <div id="감천문화마을" onclick="$.mobile.changePage('#제작과정소개', {
+            transition: 'flip',
+            changeHash: false
+        })">
+            <div id="감천문화마을bar">
+                <p style="margin-left: 10px">제작과정</p>
+            </div>
+        </div>
+
+        <div id="송도" onclick="$.mobile.changePage('#프로토타입소개', {
+            transition: 'flip',
+            changeHash: false
+        })">
+            <div id="송도bar">
+                <p style="margin-left: 10px">프로토타입</p>
+            </div>
+        </div>
+
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content" onclick="$.mobile.changePage('#home', {
+                    transition: 'flip',
+                    changeHash: true
+                })">
+                    <i class="material-icons">home</i>
+                    Home
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item chart__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">signal_cellular_alt_2_bar</i>
+                    Chart
+                </div>
+            </div>
+            <script></script>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <a href="#none" target="_blank" id="search" onclick="openPop()">
+                        <i class="material-icons">search</i></a>
+
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons" id="refresh">refresh</i>
+                    Refresh
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item dialog__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">info</i>
+                    Info
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="dialog">
+        <span class="dialog__close">&#x2715;</span>
+        <h2 class="dialog__title">프로젝트 정보</h2>
+        <p class="dialog__content"><br>
+            경성대학교 소프트웨어학과 김민조<br><br>
+            경성대학교 소프트웨어학과 윤진수<br><br>
+            담당 교수 : 경성대학교 링크 사업단 손정호 교수<br><br>
+            AI 모델 : Microsoft Azure CustomVision<br><br>
+            하드웨어 : Raspberry Pi Model B <br><br>
+            contact : alswh2427@naver.com
+        </p><br>
+        <button class="dialog__action" onclick="location.href='http://github.com/KorJM'">Read more &#8594;</button>
+    </div>
+
+    <div class="chart">
+        <span class="chart__close">&#x2715;</span>
+        <p class="chart__title" id="chartTitle">장애인보조견 신청 및 <br>선정 현황 </p>
+        <div style="height: 250px;">
+            <canvas id="myChart"></canvas>
+        </div>
+        <script src="./js/chart.js"></script>
+        <p id="chartText">
+            * 2018~2022년 8월 통계 <br>
+            최근 3년간 장애인보조견 현황’에 따르면 훈련보조견은 2019년 77마리, 2020년 78마리, 2021년 80마리로 매년 증가했다. 반면 3년간 훈련사는 10명으로 변동이 없어, 훈련사 한
+            명이 담당하는 보조견 수는 매년 늘고 있다<br>
+            출처 : 최종윤의원실 제공(https://mdtoday.co.kr/news/view/1065604220521174)
+        </p>
+    </div>
+
+    <div data-role="page" id="아이디어배경소개">
+        <div class="inner">
+            <div class="inner2">
+                <div class="inner3">
+
+                    <p>
+                    <h1 style="font-size: 30px">아이디어 배경</h1>
+                    <a href="./image/아이디어배경.png" data-fancybox data-caption="아이디어배경">
+                        <img src="./image/아이디어배경.png" alt="Image" class="image">
+                    </a><br>
+                    눈을 감고 있을 때 큰 소리나 처음 듣는 소리가 들린다면 불안하고 무섭습니다 <br>
+                    이런 고통을 항상 겪고 있는 사람들이 있습니다<br>
+                    바로 시각장애우들 입니다<br>
+                    이런 고통을 겪는 분들은 길거리를 걷는 것 조차 힘든 일입니다.<br><br>
+                    <a href="./image/안내견분포도.png" data-fancybox data-caption="안내견분포도">
+                        <img src="./image/안내견분포도.png" alt="Image" class="image">
+                    </a><br>
+                    이런 분들에게 도움을 주는 안내견, 도우미는 굉장히 비싸고 한정적인 자원입니다.<br>
+                    그래서 저희는 시각장애인의 보행에 있어 위험요소를 탐지하고 그것을 방어해줄 수단에 대해 생각해보았습니다. <br><br>
+                    <a href="./image/초기구상.png" data-fancybox data-caption="초기구상">
+                        <img src="./image/초기구상.png" alt="Image" class="image">
+                    </a><br>
+                    처음에는 스마트폰을 통해 연속적으로 촬영된 사진을 object detection으로 분석하여 위험요소가 발견되면 사용자가 착용하고 있는 이어폰으로 음성 신호를 주고 특정 버튼 클릭
+                    시 image Captioning과 TTS를 사용해 이미지에 대한 설명을 들려주는 앱을 생각 하였습니다.<br>
+                    그런데 이 방식에는 두 가지의 문제점이 발견되었습니다. <br><br>
+                    </p>
+                    <h1 style="font-size: 20px">문제점 1</h1>
+                    <a href="./image/문제점1.png" data-fancybox data-caption="문제점1">
+                        <img src="./image/문제점1.png" alt="Image" class="image">
+                    </a>
+                    <p><br>
+                        스마트폰을 사용한다면 목에 걸어 놓고 촬영하는 방식인데 그러면 오로지 진행 방향에 대한 정보만 얻을 수 있고 후방의 위험요소에 대한 대처가 힘들어집니다.<br><br>
+                    </p>
+                    <h1 style="font-size: 20px">문제점 2</h1>
+                    <a href="./image/문제점2.png" data-fancybox data-caption="문제점2">
+                        <img src="./image/문제점2.png" alt="Image" class="image">
+                    </a>
+                    <p><br>
+                        시각장애우들은 지팡이로 바닥을 쳤을 때 나는 소리를 들으며 지형지물을 구분하는 등 청각에 의존하는데 이어폰을 끼고 계속 알람이 울린다면 오히려 보행에 방해가 될 수 있다고
+                        생각했습니다. <br>
+                        이런 문제를 해결하기 위한 디바이스로 스마트폰이아닌 로봇을 생각하였습니다.<br><br>
+                    </p>
+                    <a href="./image/작동.gif" data-fancybox data-caption="작동gif">
+                        <img src="./image/작동.gif" alt="Image" class="image">
+                    </a>
+                    <p><br>
+                        작동 방식은 로봇강아지에 부착된 카메라가 전후방을 연속적으로 촬영하고 특정 시간 이내에 어떤 객체가 사용자의 방향으로 크기가 점점 커진다면 짓는 소리와 함께 연결된 끈에서
+                        진동을 발생시켜 사용자는 물론 해당 객체 또한 상황을 인지를 할 수 있는 방식입니다.<br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content" onclick="$.mobile.changePage('#home', {
+                    transition: 'flip',
+                    changeHash: true
+                })">
+                    <i class="material-icons">home</i>
+                    Home
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item chart__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">signal_cellular_alt_2_bar</i>
+                    Chart
+                </div>
+            </div>
+            <script></script>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <a href="#none" target="_blank" id="search" onclick="openPop()">
+                        <i class="material-icons">search</i></a>
+
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons" id="refresh">refresh</i>
+                    Refresh
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item dialog__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">info</i>
+                    Info
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div data-role="page" id="Azure소개">
+        <div class="inner">
+            <div class="inner2">
+                <div class="inner3">
+                    <a href="./image/azure.png" data-fancybox data-caption="Azure">
+                        <img src="./image/azure.png" alt="Image" class="image">
+                    </a>
+                    <br />
+                    Azure란 Microsoft에서 만든 클라우드 플랫폼입니다.
+                    <p>
+                        <br />
+                        <a href="./image/azureService.png" data-fancybox data-caption="Azure Services">
+                            <img src="./image/azureService.png" alt="Image" class="image">
+                        </a>
+                        <br />
+                    <p>
+                        Azure 클라우드에는 다양한 서비스가 있습니다. <br />
+                        그중에 저희는 Azure Machine Learning 서비스를 사용하였습니다.
+                    </p>
+                    <br />
+                    <a href="./image/computerVision.png" data-fancybox data-caption="Computer Vision">
+                        <img src="./image/computerVision.png" alt="Image" class="image">
+                    </a>
+                    <br />
+                    <p>Machine Learning의 기술중 사진을 분석하는 Computer Vision 에는 6가지 학습 모델이 있습니다.<br>
+                        <br>
+                    <ol>
+                        <li>Image Classification은 사진을 분석해서 이미지가 학습된 데이터중 어떤 사진인지 예측하는 모델입니다.</li>
+                        <li>Object Detection은 사진속 객체들을 탐지하여 학습된 데이터들로 분류하는 모델입니다.</li>
+                        <li>Semantic Segmentation은 사진속에서 비슷한 객체들끼리 색으로 표현하는 모델입니다.</li>
+                        <li>Image Analysis는 사진을 분석해서 사진의 상황을 문장으로 설명하는 모델입니다</li>
+                        <li>Face Detection&Recognition은 사진속 사람들의 얼굴을 탐지하는 모델입니다.</li>
+                        <li>OCR(광학문자 인식)은 사진속에서 문자로 된 내용들을 분석하는 모델입니다.</li>
+                    </ol>
+                    <br>
+                    <a href="./image/objectDetection.png" data-fancybox data-caption="Object Detection">
+                        <img src="./image/objectDetection.png" alt="Image" class="image">
+                    </a>
+                    <br>
+                    저희는 이 6가지중 Object Detection을 사용하여 이번 프로젝트를 진행하였습니다.
+                    </p><br>
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content" onclick="$.mobile.changePage('#home', {
+                    transition: 'flip',
+                    changeHash: true
+                })">
+                    <i class="material-icons">home</i>
+                    Home
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item chart__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">signal_cellular_alt_2_bar</i>
+                    Chart
+                </div>
+            </div>
+            <script></script>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <a href="#none" target="_blank" id="search" onclick="openPop()">
+                        <i class="material-icons">search</i></a>
+
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons" id="refresh">refresh</i>
+                    Refresh
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item dialog__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">info</i>
+                    Info
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div data-role="page" id="차별점소개">
+        <div class="inner">
+            <div class="inner2">
+                <div class="inner3">
+                    <h1 style="font-size: 30px">차별점</h1>
+                    <a href="./image/로봇개.png" data-fancybox data-caption="현대의 로봇개">
+                        <img src="./image/로봇개.png" alt="Image" class="image">
+                    </a><br>
+                    <a href="./image/테슬라봇.png" data-fancybox data-caption="테슬라봇">
+                        <img src="./image/테슬라봇.png" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        사실 저희 얘기를 들으시면서 이런 생각이 드실 수 있습니다.<br>
+                        ‘이미 개발이 많이 진행 된 뻔한 주제 아닌가?’<br>
+                        맞습니다.<br>
+                        현대의 로봇개나 테슬라의 테슬라 봇처럼 인공지능이 적용된 로봇은 현 시대에 가장 집중하는 분야 중 하나입니다.<br>
+                        하지만 일반적인 시각장애우들이 이런것들로 도움을 받을 수 있을까요?<br>
+                        아닙니다.
+                        <br><br>
+                    </p>
+                    <a href="./image/돈.jpeg" data-fancybox data-caption="금전적 부담">
+                        <img src="./image/돈.jpeg" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        왜냐면 금전적 부담이 크기 떄문입니다.<br>
+                        저희는 어떤식으로 제작을 해야 이런 부담을 조금이라도 줄일 수 있을까를 생각했습니다.
+                        <br><br>
+                    </p>
+                    <a href="./image/오픈소스라즈베리파이.png" data-fancybox data-caption="오픈소스 & 라즈베리파이">
+                        <img src="./image/오픈소스라즈베리파이.png" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        그래서 오픈소스와 라즈베리파이를 생각하였습니다.<br>
+                        Azure를 사용해 만든 학습 데이터를 라즈베리파이에 적용시켜 기체를 제작하여 개발 비용을 크게 줄이고 더 많이 보급될 수 있도록 하자는 생각입니다.
+                        <br><br>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content" onclick="$.mobile.changePage('#home', {
+                    transition: 'flip',
+                    changeHash: true
+                })">
+                    <i class="material-icons">home</i>
+                    Home
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item chart__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">signal_cellular_alt_2_bar</i>
+                    Chart
+                </div>
+            </div>
+            <script></script>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <a href="#none" target="_blank" id="search" onclick="openPop()">
+                        <i class="material-icons">search</i></a>
+
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons" id="refresh">refresh</i>
+                    Refresh
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item dialog__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">info</i>
+                    Info
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div data-role="page" id="제작과정소개">
+        <div class="inner">
+            <div class="inner2">
+                <div class="inner3">
+                    <h1 style="font-size: 30px">제작과정</h1>
+                    <a href="./image/학습.png" data-fancybox data-caption="AI 학습">
+                        <img src="./image/학습.png" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        우선 Azure Custom Vision인 Object Detection을 사용하여 학습을 진행하였습니다.
+                        <br><br>
+                    </p>
+                    <a href="./image/학습결과.png" data-fancybox data-caption="학습결과">
+                        <img src="./image/학습결과.png" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        학습 결과는 위와 같습니다.
+                        <br><br>
+                    </p>
+                    <a href="./image/실행결과.png" data-fancybox data-caption="실행결과">
+                        <img src="./image/실행결과.png" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        학습 결과를 바탕으로 해당 이미지를 테스트 했을 때 이런 결과가 추출되는데 어떤 객체가 있는지, 해당 객체의 위치정보와 크기정보를 알려주게 됩니다.<br>
+                        이 정보를 통해 특정 시간내에 사용자의 방향으로 크기가 커지는 객체를 찾아내는 알고리즘을 적용하여 구현할 생각입니다
+                        <br><br>
+                    </p>
+                    <a href="./image/프로토타입방식.png" data-fancybox data-caption="프로토타입방식">
+                        <img src="./image/프로토타입방식.png" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        하드웨어는 라즈베리파이를 중심으로 제작하였습니다. <br>
+                        라즈베리파이는 네트워크 통신이 가능할 뿐 아니라 5V전압으로 외장베터리로도 구동이 가능해 저희가 생각한 기체에 적용시키기 적합하다고 생각하였습니다. <br>
+                        이런식으로 개발비용을 낮춘다면 보급률을 올릴 수 있고 시각장애인 뿐 아니라 도움이 필요한 다른 분들에게도 조금이나마 의지할 수 있는 버팀목이 될 수 있을 것입니다.
+                        <br><br>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content" onclick="$.mobile.changePage('#home', {
+                    transition: 'flip',
+                    changeHash: true
+                })">
+                    <i class="material-icons">home</i>
+                    Home
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item chart__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">signal_cellular_alt_2_bar</i>
+                    Chart
+                </div>
+            </div>
+            <script></script>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <a href="#none" target="_blank" id="search" onclick="openPop()">
+                        <i class="material-icons">search</i></a>
+
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons" id="refresh">refresh</i>
+                    Refresh
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item dialog__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">info</i>
+                    Info
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div data-role="page" id="프로토타입소개">
+        <div class="inner">
+            <div class="inner2">
+                <div class="inner3">
+                    <h1 style="font-size: 30px">프로토타입</h1>
+                    <a href="./image/데헷.jpeg" data-fancybox data-caption="ㅎㅎ">
+                        <img src="./image/데헷.jpeg" alt="Image" class="image">
+                    </a>
+                    <p>
+                        <br>
+                        아직 제작은 못헀습니다 ㅎㅎ
+                        <br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content" onclick="$.mobile.changePage('#home', {
+                    transition: 'flip',
+                    changeHash: true
+                })">
+                    <i class="material-icons">home</i>
+                    Home
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item chart__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">signal_cellular_alt_2_bar</i>
+                    Chart
+                </div>
+            </div>
+            <script></script>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <a href="#none" target="_blank" id="search" onclick="openPop()">
+                        <i class="material-icons">search</i></a>
+
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons" id="refresh">refresh</i>
+                    Refresh
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item dialog__trigger">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">info</i>
+                    Info
+                </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+</body>
+
+</html>
